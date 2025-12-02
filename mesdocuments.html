@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DocuFast – Mes documents</title>
+
+  <!-- Police Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS généré par Tailwind -->
+  <link rel="stylesheet" href="output.css" />
+</head>
+
+<body class="font-[Montserrat,_sans-serif] min-h-screen bg-gradient-to-b from-[#FFDEE3] via-[#FFF3F5] to-[#E4E4FF]">
+
+  <!-- Ligne "Mes documents" -->
+  <div class="text-sm text-gray-500 px-6 pt-4 max-w-6xl mx-auto">
+    Mes documents
+  </div>
+
+  <!-- HEADER -->
+  <header class="mt-2">
+    <div
+      class="max-w-6xl mx-auto px-6 py-3 rounded-t-2xl bg-gradient-to-r from-[#FFD0C5] via-[#FFC2CC] to-[#C7D3FF] shadow">
+      <div class="flex items-center justify-between">
+
+        <!-- Logo -->
+        <img src="logo-docufast.png"
+             alt="DocuFast Logo"
+             class="h-[61px] w-[168px] object-contain">
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#" class="text-[#222020] hover:underline">Accueil</a>
+          <a href="#" class="text-[#B60C0C] underline">Mes démarches</a>
+          <a href="#" class="text-[#222020] hover:underline">Calendrier</a>
+        </nav>
+
+        <!-- Profil -->
+        <div class="flex items-center gap-3">
+          <button
+            class="hidden sm:inline-block bg-[#222020] text-white text-sm px-4 py-2 rounded-full">
+            Déconnecter
+          </button>
+
+          <div
+            class="w-9 h-9 rounded-full bg-white border border-gray-300 flex items-center justify-center text-xs font-bold text-[#222020]">
+            DF
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="max-w-6xl mx-auto px-6 pb-16 bg-[#FFF9FA]/95 rounded-b-2xl shadow-lg">
+
+    <!-- Titre -->
+    <section class="text-center pt-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-[#222020] tracking-wide">
+        ORGANISEZ VOS DOCUMENTS
+      </h1>
+
+      <p class="mt-3 text-[#545252] text-sm md:text-base">
+        Glissez et déposez vos documents dans les catégories ci dessous
+      </p>
+    </section>
+
+    <!-- 3 blocs de dépôt -->
+    <section class="mt-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Bloc 1 -->
+        <div
+          class="bg-white rounded-2xl shadow-[0_4px_10px_rgba(0,0,0,0.08)] p-8 flex flex-col items-center text-center">
+          <div class="w-10 h-10 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 stroke-width="1.5" stroke="#222020" class="w-full h-full">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 4.5H6.75A2.25 2.25 0 004.5 6.75v10.5A2.25 2.25 0 006.75 19.5h10.5A2.25 2.25 0 0019.5 
+                    17.25V12m-7.5-7.5L19.5 12M12 4.5V12" />
+            </svg>
+          </div>
+
+          <p class="text-sm text-[#545252]">
+            Déposez les documents qui nécessitent une signature ici
+          </p>
+        </div>
+
+        <!-- Bloc 2 -->
+        <div
+          class="bg-white rounded-2xl shadow-[0_4px_10px_rgba(0,0,0,0.08)] p-8 flex flex-col items-center text-center">
+          <div class="w-10 h-10 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 stroke-width="1.5" stroke="#222020" class="w-full h-full">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12.75l2.25 2.25L15 9.75M21 12a9 9 0 
+                    11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+
+          <p class="text-sm text-[#545252]">
+            Déposez les documents pour validation finale
+          </p>
+        </div>
+
+        <!-- Bloc 3 -->
+        <div
+          class="bg-white rounded-2xl shadow-[0_4px_10px_rgba(0,0,0,0.08)] p-8 flex flex-col items-center text-center">
+          <div class="w-10 h-10 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 stroke-width="1.5" stroke="#222020" class="w-full h-full">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3.75 9.75L4.5 5.25h15l.75 
+                    4.5M4.5 9.75h15v8.25a1.5 1.5 0 01-1.5 1.5h-12a1.5 1.5 0 01-1.5-1.5V9.75zM9 13.5h6" />
+            </svg>
+          </div>
+
+          <p class="text-sm text-[#545252]">
+            Déposez les documents terminés pour les archiver
+          </p>
+        </div>
+
+      </div>
+
+      <p class="mt-6 text-center text-[#545252] text-sm">
+        Vous pouvez déposer plusieurs fichiers à la fois
+      </p>
+    </section>
+
+    <!-- ACTIVITÉ RÉCENT -->
+    <section class="mt-14">
+      <h2 class="text-center text-3xl font-extrabold text-[#222020] mb-8 tracking-wide">
+        ACTIVITÉ RÉCENT
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <!-- 1. Contrat_final.pdf (succès) -->
+        <div class="bg-[#F3FFF6] px-6 py-4 rounded-xl shadow-sm flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full border border-green-500 flex items-center justify-center">
+            <span class="text-green-500 text-lg">✔</span>
+          </div>
+          <div class="text-xs md:text-sm">
+            <p class="font-bold text-[#222020]">Contrat_final.pdf</p>
+            <p class="text-[#545252]">Déposé dans “A Signer” il y a 3 min</p>
+          </div>
+        </div>
+
+        <!-- 2. Facture_2023.pdf (info) -->
+        <div class="bg-[#F3F3FF] px-6 py-4 rounded-xl shadow-sm flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full border border-[#6054EC] flex items-center justify-center">
+            <span class="text-[#6054EC] text-lg">i</span>
+          </div>
+          <div class="text-xs md:text-sm">
+            <p class="font-bold text-[#222020]">Facture_2023.pdf</p>
+            <p class="text-[#545252]">Déposé dans “A Valider” il y a 1 heure</p>
+          </div>
+        </div>
+
+        <!-- 3. Attestation_présence.pdf (succès) -->
+        <div class="bg-[#F3FFF6] px-6 py-4 rounded-xl shadow-sm flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full border border-green-500 flex items-center justify-center">
+            <span class="text-green-500 text-lg">✔</span>
+          </div>
+          <div class="text-xs md:text-sm">
+            <p class="font-bold text-[#222020]">Attestation_présence.pdf</p>
+            <p class="text-[#545252]">Déposé dans “A Signer” il y a 42 min</p>
+          </div>
+        </div>
+
+        <!-- 4. image.jpg (erreur) -->
+        <div class="bg-[#FFF2F2] px-6 py-4 rounded-xl shadow-sm flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full border border-red-500 flex items-center justify-center">
+            <span class="text-red-500 text-lg">!</span>
+          </div>
+          <div class="text-xs md:text-sm">
+            <p class="font-bold text-[#222020]">image.jpg</p>
+            <p class="text-[#545252]">Échec du dépôt : format non supporté</p>
+          </div>
+        </div>
+
+        <!-- 5. Convocation_stage.pdf (succès) -->
+        <div class="bg-[#F3FFF6] px-6 py-4 rounded-xl shadow-sm flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full border border-green-500 flex items-center justify-center">
+            <span class="text-green-500 text-lg">✔</span>
+          </div>
+          <div class="text-xs md:text-sm">
+            <p class="font-bold text-[#222020]">Convocation_stage.pdf</p>
+            <p class="text-[#545252]">Déposé dans “A Signer” il y a 3 jours</p>
+          </div>
+        </div>
+
+        <!-- 6. photo.png (erreur) -->
+        <div class="bg-[#FFF2F2] px-6 py-4 rounded-xl shadow-sm flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full border border-red-500 flex items-center justify-center">
+            <span class="text-red-500 text-lg">!</span>
+          </div>
+          <div class="text-xs md:text-sm">
+            <p class="font-bold text-[#222020]">photo.png</p>
+            <p class="text-[#545252]">Échec du dépôt : résolution non supportée</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-16 pt-8 pb-6 border-t border-gray-200">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-[#545252]">
+
+        <div>
+          <h3 class="font-semibold text-[#222020] mb-2">DocuFast</h3>
+          <p>Plateforme de gestion administrative universitaire.</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-[#222020] mb-2">Navigation</h3>
+          <p>Accueil</p>
+          <p>Mes demandes</p>
+          <p>Documents validés</p>
+          <p>Nouvelle demande</p>
+        </div>

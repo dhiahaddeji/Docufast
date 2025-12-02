@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Tes petites classes perso en plus de Tailwind */
+@layer utilities {
+  /* Tu peux l’utiliser si tu veux un léger effet d’ombre sur du texte */
+  .text-shadow-soft {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+}
