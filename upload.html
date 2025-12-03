@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Upload Attestation</title>
+</head>
+
+<body class="bg-white font-Poppins">
+
+  <!-- ▬▬▬▬▬ NAVBAR ▬▬▬▬▬ -->
+  <nav class="w-full bg-gradient-to-r from-pink-200 to-blue-200 py-4 shadow">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="assets/logo.svg" class=" " />
+      </div>
+
+      <!-- Menu -->
+      <div class="flex gap-8 text-sm font-medium">
+        <a href="#" class="hover:text-blue-700">Accueil</a>
+        <a href="#" class="text-red-600 font-bold">Mes demandes</a>
+        <a href="#" class="hover:text-blue-700">Documents validés</a>
+        <a href="#" class="hover:text-blue-700">Nouvelle demande</a>
+        <a href="#" class="hover:text-blue-700">Mes démarches</a>
+        <a href="#" class="hover:text-blue-700">Historique</a>
+        <a href="#" class="hover:text-blue-700">Assistant</a>
+      </div>
+
+      <!-- Profil + Déconnexion -->
+      <div class="flex items-center gap-3 relative">
+
+        <button class="bg-indigo-500 text-white px-4 py-1 rounded-xl shadow font-semibold">
+          Se déconnecter
+        </button>
+
+        <!-- Avatar + Icone Paramètres -->
+        <div class="relative">
+          <img src="assets/man.svg" class="w-12 h-12 rounded-full shadow" />
+
+          <!-- Icône engrenage sous l'avatar -->
+          <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 
+            flex items-center justify-center mt-4">
+    <img src="assets/cogwheel.svg" class="w-6 h-6 " />
+</div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- ▬▬▬▬▬ SECTION UPLOAD ▬▬▬▬▬ -->
+  <section class="w-full bg-gradient-to-br from-pink-100 to-blue-100 py-20">
+
+    <div class="max-w-4xl mx-auto text-center space-y-10">
+
+      <h2 class="text-3xl font-bold">Attestation de stage</h2>
+      <p class="text-lg">Veuillez corriger votre document</p>
+
+      <!-- Icône cloud -->
+      <div class="flex justify-center">
+        <img src="assets/cloud_upload.svg" class="w-40 opacity-80" />
+      </div>
+
+      <h3 class="text-3xl font-bold">Upload your file here or</h3>
+
+      <!-- Boutons Upload -->
+      <div class="flex items-center justify-center gap-4">
+
+        <!-- Browse Button -->
+        <label id="browseBtn" class="cursor-pointer bg-blue-600 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow">
+          <input type="file" id="fileInput" class="hidden">
+          Parcourir les fichiers
+        </label>
+
+        <!-- Icône ajout photo -->
+        <button id="photoBtn" class="w-14 h-14 flex items-center justify-center bg-white rounded-xl shadow">
+          <img src="assets/add_photo.svg" class="w-6 h-6" />
+        </button>
+      </div>
+
+      <!-- Aperçu fichier -->
+      <div id="preview" class="mt-4"></div>
+
+      <button class="mt-6 px-10 py-3 bg-blue-600 text-white rounded-full text-xl font-bold shadow">
+        Valider
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- ▬▬▬▬▬ FOOTER ▬▬▬▬▬ -->
+  <footer class="bg-white shadow-xl rounded-t-2xl mt-10 py-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-3 px-10 text-gray-700">
+
+      <div>
+        <h3 class="font-bold text-lg mb-2">DocuFast</h3>
+        <p>Plateforme de gestion administrative universitaire.</p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-lg mb-2">Navigation</h3>
+        <p>Accueil</p>
+        <p>Mes demandes</p>
+        <p>Documents validés</p>
+        <p>Nouvelle demande</p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-lg mb-2">Contact</h3>
+        <p>Email</p>
+        <p>LinkedIn</p>
+        <p>Facebook</p>
+      </div>
+
+    </div>
+
+    <div class="text-center text-sm mt-6 text-gray-600">
+      © 2025 DocuFast
+    </div>
+  </footer>
+
+  <!-- ▬▬▬▬▬ JAVASCRIPT UPLOAD + PREVIEW ▬▬▬▬▬ -->
+  <script>
+    const fileInput = document.getElementById("fileInput");
+    const browseBtn = document.getElementById("browseBtn");
+    const photoBtn = document.getElementById("photoBtn");
+    const preview = document.getElementById("preview");
+
+    // Clic bouton "Parcourir"
+    browseBtn.addEventListener("click", () => fileInput.click());
+
+    // Clic icône "Ajouter photo"
+    photoBtn.addEventListener("click", () => fileInput.click());
+
+    // Quand un fichier est choisi
+    fileInput.addEventListener("change", () => {
+      if (!fileInput.files || !fileInput.files[0]) return;
+
+      const file = fileInput.files[0];
+      preview.innerHTML = `
+        <p class="text-gray-700">Fichier sélectionné : <b>${file.name}</b></p>
+      `;
+
+      if (file.type.startsWith("image/")) {
+        const img = document.createElement("img");
+        img.src = URL.createObjectURL(file);
+        img.className = "mt-4 mx-auto w-48 h-auto rounded-lg shadow";
+        preview.appendChild(img);
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Assistant</title>
+</head>
+
+<body class="bg-white font-Poppins">
+
+
+    <nav class="w-full bg-gradient-to-r from-pink-200 to-blue-200 py-4 shadow">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6">
+
+          
+            <div class="flex items-center gap-2">
+                <img src="assets/logo.svg" />
+            </div>
+
+           
+            <div class="flex gap-8 text-sm font-medium">
+                <a href="#" class="hover:text-blue-700">Accueil</a>
+                <a href="#" class="text-red-600 font-bold">Mes demandes</a>
+                <a href="#" class="hover:text-blue-700">Documents validés</a>
+                <a href="#" class="hover:text-blue-700">Nouvelle demande</a>
+                <a href="#" class="hover:text-blue-700">Mes démarches</a>
+                <a href="#" class="hover:text-blue-700">Historique</a>
+                <a href="#" class="hover:text-blue-700">Assistant</a>
+            </div>
+
+           
+            <div class="flex items-center gap-3 relative">
+
+                <button class="bg-indigo-500 text-white px-4 py-1 rounded-xl shadow font-semibold">
+                    Se déconnecter
+                </button>
+
+                <div class="relative">
+                    <img src="assets/man.svg" class="w-12 h-12 rounded-full shadow" />
+                    <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center justify-center">
+                        <img src="assets/cogwheel.svg" class="w-6 h-6" />
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <section class="w-full bg-gradient-to-br from-pink-100 to-blue-100 py-20">
+
+        <div class="max-w-4xl mx-auto">
+
+            <h1 class="text-4xl font-bold mb-4">Assistant d’enchaînement</h1>
+
+            <p class="text-gray-700 mb-12 leading-relaxed text-lg">
+                Bonjour Monsieur / Madame,<br>
+                Je suis votre assistant virtuel et je vous accompagnerai étape par étape
+                pour obtenir votre document.
+            </p>
+
+        
+            <div class="space-y-6">
+
+               
+                <h2 class="text-center text-2xl font-bold mb-12">
+        Demande de mobilité
+    </h2>
+
+    <div class="max-w-xl mx-auto space-y-8">
+
+       
+        <div class="flex items-center gap-4 bg-white shadow-lg rounded-2xl px-6 py-4">
+            <div class="w-8 h-8 border-2 border-green-500 bg-green-50 flex items-center justify-center rounded-md">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6L9 17L4 12" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <span class="text-lg font-semibold">Remplir le formulaire</span>
+        </div>
+
+        <div class="flex items-center gap-4 bg-white shadow-lg rounded-2xl px-6 py-4">
+            <div class="w-8 h-8 border-2 border-black rounded-md"></div>
+            <span class="text-lg font-semibold">Joindre une pièce d’identité</span>
+        </div>
+
+     
+        <div class="flex items-center gap-4 bg-white shadow-lg rounded-2xl px-6 py-4 w-72">
+            <div class="w-8 h-8 border-2 border-black rounded-md"></div>
+            <span class="text-lg font-semibold">Soumettre</span>
+        </div>
+
+    </div>
+
+  
+    <div class="max-w-2xl mx-auto mt-20 flex justify-between px-6">
+
+    
+        <button class="bg-blue-600 text-white px-10 py-3 rounded-full font-semibold text-lg shadow">
+            Annuler
+        </button>
+
+        <button 
+            class="px-10 py-3 rounded-full font-semibold text-lg shadow bg-gray-300 text-white cursor-not-allowed"
+            disabled>
+            Valider
+        </button>
+
+    </div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="bg-white shadow-xl rounded-t-2xl mt-10 py-10">
+
+        <div class="max-w-7xl mx-auto grid grid-cols-3 px-10 text-gray-700">
+
+            <div>
+                <h3 class="font-bold text-lg mb-2">DocuFast</h3>
+                <p>Plateforme de gestion administrative universitaire.</p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg mb-2">Navigation</h3>
+                <p>Accueil</p>
+                <p>Mes demandes</p>
+                <p>Documents validés</p>
+                <p>Nouvelle demande</p>
+            </div>
+
+            <div>
+                <h3 class="games text-lg mb-2">Contact</h3>
+                <p>Email</p>
+                <p>LinkedIn</p>
+                <p>Facebook</p>
+            </div>
+
+        </div>
+
+        <div class="text-center text-sm mt-6 text-gray-600">
+            © 2025 DocuFast
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
