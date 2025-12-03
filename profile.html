@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil – DocuFast</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --red-main: #b60c0c;
+            --border-red: #ef4444;
+            --violet: #6054ec;
+            --rose-card: #fff6f9;
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        body {
+            background:#f4f4ff;
+            font-family:"Montserrat", sans-serif;
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
+        }
+
+        a { text-decoration:none; color:inherit; }
+
+        /* SWITCH iOS */
+        .ios-switch {
+            width: 50px;
+            height: 28px;
+            border-radius: 999px;
+            background: #d1d5db;
+            position: relative;
+            transition: 0.25s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .ios-switch[data-state="on"] { background: #4ade80; }
+
+        .ios-knob {
+            width: 22px;
+            height: 22px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            transition: 0.25s ease;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .ios-switch[data-state="on"] .ios-knob { transform: translateX(22px); }
+
+        .ios-knob::before { content:"🔘"; font-size:14px; }
+        .ios-switch[data-state="on"] .ios-knob::before { content:"⚡"; font-size:16px; }
+
+        /* NAVBAR */
+
+        .navbar {
+            width: 100%;
+            background: linear-gradient(
+                    90deg,
+                    #ffc0cb 0%,
+                    #c58af9 50%,
+                    #6054ec 100%
+            );
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .navbar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .navbar-center {
+            display: flex;
+            align-items: center;
+            gap: 56px;
+            font-family: "Poppins", sans-serif;
+            font-size: 17px;
+        }
+
+        .nav-link {
+            color: var(--grey-text);
+            font-weight: 500;
+        }
+
+        .nav-link-strong {
+            font-weight: 700;
+        }
+
+        .nav-link-active {
+            color: var(--red-main);
+        }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn-logout {
+            padding: 6px 18px;
+            border-radius: 999px;
+            border: none;
+            background: var(--violet);
+            color: #fff;
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #fff;
+        }
+
+        /* PAGE */
+        .page { max-width:900px; margin:60px auto; padding:0 20px; flex:1; }
+        .section-title { text-align:center; font-size:32px; font-weight:800; margin-bottom:30px; }
+
+        /* CARD PROFIL */
+        .profile-card {
+            background:white; padding:35px 40px;
+            border-radius:20px; border:1px solid var(--border-red);
+            box-shadow:0 4px 12px rgba(0,0,0,0.15);
+            text-align:center; margin-bottom:40px;
+        }
+
+        .profile-img {
+            width:130px;
+            height:130px;
+            border-radius:50%;
+            border:3px solid var(--red-main);
+            background:var(--rose-card);
+            object-fit:cover;
+
+            /* NEW → centrer parfaitement */
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+            margin-bottom:20px;
+        }
+
+
+        /* PARAMETRES */
+        .settings-container {
+            background:white; padding:35px 45px;
+            border-radius:20px; border:1px solid var(--border-red);
+            box-shadow:0 4px 12px rgba(0,0,0,0.15);
+            margin-bottom:40px;
+        }
+        .settings-group { margin-bottom:30px; }
+        .group-title {
+            display:flex; align-items:center; gap:10px;
+            font-size:20px; font-weight:700; margin-bottom:15px;
+        }
+        .plus-icon {
+            width:20px; height:20px; border-radius:50%;
+            background:#ff4d4d; color:white;
+            display:flex; align-items:center; justify-content:center;
+        }
+        .setting-item {
+            display:flex; justify-content:space-between;
+            align-items:center; font-size:17px; margin-bottom:12px;
+        }
+
+        /* FOOTER */
+        .footer {
+            width: 50%;
+            max-width:1200px;
+            margin:0 auto 24px;
+            padding:18px 20px 10px;
+            background:#fff; border-radius:15px;
+            box-shadow:0 4px 4px 5px rgba(0,0,0,0.25);
+        }
+        .footer-inner {
+            display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;
+        }
+        .footer-bottom {
+            border-top:1px solid #545252;
+            margin-top:10px; text-align:center; padding-top:8px;
+        }
+        .footer-block-title {
+            font-weight: 900;      /* plus BOLD */
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="navbar-inner">
+        <a href="index.html"><img src="..\Docufast-main\logo-docufast.png" class="logo-img" /></a>
+
+        <nav class="navbar-center">
+            <a href="index.html">Accueil</a>
+            <a href="mesdemarches.html">Mes démarches</a>
+            <a href="calendrier.html">Models</a>
+            <a href="profile.html" class="nav-link-active">Profil</a>
+        </nav>
+
+        <div class="navbar-right">
+            <button class="btn-logout">Se Déconnecter</button>
+            <img src="https://placehold.co/40x40" class="avatar">
+        </div>
+    </div>
+</header>
+
+<main class="page">
+
+    <h1 class="section-title">MON PROFIL</h1>
+
+    <div class="profile-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" class="profile-img" />
+        <div class="profile-info">
+            <p><span>Nom :</span> Haider Adolfo SCHENATO</p>
+            <p><span>Email :</span> Haider.Adolfo.SCHENATO@gmail.com</p>
+            <p><span>ID :</span> 5A1D4555</p>
+            <p><span>Classe :</span> 4TWIN6</p>
+        </div>
+    </div>
+
+    <!-- PARAMETRES -->
+    <div class="settings-container">
+
+        <div class="settings-group">
+            <div class="group-title">
+                <div class="plus-icon">+</div> Automatisation
+            </div>
+
+            <div class="setting-item">
+                <span>Auto-Remplissage</span>
+                <button class="ios-switch" data-state="off"><span class="ios-knob"></span></button>
+            </div>
+
+            <div class="setting-item">
+                <span>Alerte Automatique</span>
+                <button class="ios-switch" data-state="off"><span class="ios-knob"></span></button>
+            </div>
+
+            <div class="setting-item">
+                <span>Analyse prédictive des délais</span>
+                <button class="ios-switch" data-state="off"><span class="ios-knob"></span></button>
+            </div>
+        </div>
+
+        <div class="settings-group">
+            <div class="group-title">
+                <div class="plus-icon">+</div> Canal de notification
+            </div>
+
+            <div class="setting-item">
+                <span>WhatsApp 🟢</span>
+                <button class="ios-switch" data-state="on"><span class="ios-knob"></span></button>
+            </div>
+
+            <div class="setting-item">
+                <span>Mail 📧</span>
+                <button class="ios-switch" data-state="off"><span class="ios-knob"></span></button>
+            </div>
+
+            <div class="setting-item">
+                <span>SMS 📨</span>
+                <button class="ios-switch" data-state="off"><span class="ios-knob"></span></button>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div>
+            <h3 class="footer-block-title">DocuFast</h3>
+            <p>Plateforme de gestion administrative universitaire.</p>
+        </div>
+
+        <div>
+            <h4 class="footer-block-title">Navigation</h4>
+            <p>Accueil<br>Mes demandes<br>Documents validés<br>Nouvelle demande</p>
+        </div>
+
+        <div>
+            <h4 class="footer-block-title">Contact</h4>
+            <p>Email<br>LinkedIn<br>Facebook</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">© 2025 DocuFast</div>
+</footer>
+
+<!-- JS Switch -->
+<script>
+    document.querySelectorAll('.ios-switch').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const isOn = btn.getAttribute("data-state") === "on";
+            btn.setAttribute("data-state", isOn ? "off" : "on");
+
+            const knob = btn.querySelector('.ios-knob');
+            knob.style.transform += " scale(1.2)";
+            setTimeout(() => {
+                knob.style.transform = knob.style.transform.replace(" scale(1.2)", "");
+            }, 150);
+        });
+    });
+</script>
+
+</body>
+</html>
