@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DocuFast - Assistance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+          colors: {
+            primary: '#E64A19',
+            accent: '#5E35B1',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-blue-200 text-gray-800 flex flex-col">
+
+  <!-- NAVBAR -->
+  <header class="bg-gradient-to-r from-pink-200 via-pink-100 to-cyan-200 shadow-sm">
+    <div class="max-w-screen-2xl mx-auto px-4 lg:px-8 py-4 flex items-center justify-between">
+      
+      <div class="flex items-center gap-4 -ml-4">
+        <img src="logo-docufast.png" alt="DocuFast" class="h-14">
+        <div>
+          <div class="font-bold text-gray-900 text-xl">DocuFast</div>
+          <div class="text-xs text-gray-600 -mt-1">Plateforme de gestion administrative universitaire</div>
+        </div>
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
+        <a href="#" class="text-gray-700 hover:text-primary">Accueil</a>
+        <a href="#" class="text-gray-700 hover:text-primary">Mes demandes</a>
+        <a href="#" class="text-gray-700 hover:text-primary">Documents validés</a>
+        <a href="#" class="text-gray-700 hover:text-primary">Nouvelle demande</a>
+        <a href="#" class="text-gray-700 hover:text-primary">Mes démarches</a>
+        <a href="#" class="text-gray-700 hover:text-primary">Historique</a>
+        <a href="#" class="text-primary font-bold">Assistant</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#" class="bg-accent text-white px-4 py-2 rounded-full text-xs font-bold shadow-md hover:shadow-lg transition">
+          Se déconnecter
+        </a>
+        <img src="https://i.pravatar.cc/150" alt="Avatar" class="w-10 h-10 rounded-full border-2 border-white shadow">
+        <span class="material-icons text-gray-600 text-2xl cursor-pointer hover:text-gray-900">settings</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <!-- Discussion Section -->
+      <div class="lg:col-span-2 bg-white rounded-3xl shadow-xl p-6">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900">DISCUSSION</h2>
+            <p class="text-sm text-gray-500">CHAT EN DIRECT</p>
+          </div>
+          <div class="text-right">
+            <p class="text-xs text-gray-500">ASSISTANCE DOCUFAST</p>
+            <p class="text-xs text-gray-500">EN LIGNE</p>
+          </div>
+          <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+            <span class="text-white font-bold">?</span>
+          </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="space-y-4 mb-6 h-96 overflow-y-auto">
+          
+          <!-- Message Assistant -->
+          <div class="flex gap-3">
+            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-white font-bold">A</span>
+            </div>
+            <div>
+              <div class="bg-gray-100 rounded-2xl p-4 max-w-md">
+                <p class="text-sm text-gray-800">Bonjour ! Bienvenue sur l'assistance DocuFast. Comment puis-je vous aider aujourd'hui ?</p>
+              </div>
+              <p class="text-xs text-gray-400 mt-1 ml-2">10:31</p>
+            </div>
+          </div>
+
+          <!-- Message User -->
+          <div class="flex gap-3 justify-end">
+            <div>
+              <div class="bg-accent text-white rounded-2xl p-4 max-w-md">
+                <p class="text-sm">Bonjour, j'aimerais savoir où en est ma demande de certificat de scolarité</p>
+              </div>
+              <p class="text-xs text-gray-400 mt-1 mr-2 text-right">10:31</p>
+            </div>
+            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-white font-bold">E</span>
+            </div>
+          </div>
+
+          <!-- Message Assistant -->
+          <div class="flex gap-3">
+            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-white font-bold">A</span>
+            </div>
+            <div>
+              <div class="bg-gray-100 rounded-2xl p-4 max-w-md">
+                <p class="text-sm text-gray-800">Je vérifie immédiatement votre demande. Pouvez-vous me donner votre numéro d'étudiant ?</p>
+              </div>
+              <p class="text-xs text-gray-400 mt-1 ml-2">10:32</p>
+            </div>
+          </div>
+
+          <!-- Message User -->
+          <div class="flex gap-3 justify-end">
+            <div>
+              <div class="bg-accent text-white rounded-2xl p-4 max-w-md">
+                <p class="text-sm">Oui bien sûr, c'est le 20249156</p>
+              </div>
+              <p class="text-xs text-gray-400 mt-1 mr-2 text-right">10:32</p>
+            </div>
+            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-white font-bold">E</span>
+            </div>
+          </div>
+
+          <!-- Message Assistant -->
+          <div class="flex gap-3">
+            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-white font-bold">A</span>
+            </div>
+            <div>
+              <div class="bg-gray-100 rounded-2xl p-4 max-w-md">
+                <p class="text-sm text-gray-800">Merci ! Votre certificat de scolarité a été validé et est prêt au téléchargement. Vous le trouverez dans la section "Suivi des demandes".</p>
+              </div>
+              <p class="text-xs text-gray-400 mt-1 ml-2">10:33</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Input Message -->
+        <div class="flex gap-3 items-center bg-gray-50 rounded-full px-4 py-3">
+          <input 
+            type="text" 
+            placeholder="ÉCRIVEZ VOTRE MESSAGE..." 
+            class="flex-1 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
+          />
+          <button class="w-10 h-10 bg-accent rounded-full flex items-center justify-center hover:bg-accent/80 transition-colors">
+            <span class="material-icons text-white text-xl">send</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        
+        <!-- Questions Fréquentes -->
+        <div class="bg-white rounded-3xl shadow-xl p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">QUESTIONS FRÉQUENTES</h3>
+          <div class="space-y-4">
+            <div class="border-b border-gray-200 pb-3">
+              <button class="text-left w-full hover:text-accent transition-colors">
+                <p class="font-semibold text-gray-900">Comment suivre ma demande ?</p>
+              </button>
+            </div>
+            <div class="border-b border-gray-200 pb-3">
+              <button class="text-left w-full hover:text-accent transition-colors">
+                <p class="font-semibold text-gray-900">Délai de traitement ?</p>
+                <p class="text-sm text-gray-500 mt-1">2 à 5 jours ouvrables</p>
+              </button>
+            </div>
+            <div>
+              <button class="text-left w-full hover:text-accent transition-colors">
+                <p class="font-semibold text-gray-900">Télécharger mon document ?</p>
+                <p class="text-sm text-gray-500 mt-1">Cliquez sur "Vos détails"</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Besoin d'aide -->
+        <div class="bg-white rounded-3xl shadow-xl p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">BESOIN D'AIDE?</h3>
+          <div class="space-y-4 text-sm">
+            <div>
+              <p class="font-semibold text-gray-900">Email:</p>
+              <p class="text-gray-700">support@docufast.fr</p>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Téléphone:</p>
+              <p class="text-gray-700">+33 1 23 45 67 89</p>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Horaire:</p>
+              <p class="text-gray-700">Lun-Ven: 9h-18h</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-lg mt-auto">
+    <div class="max-w-7xl mx-auto px-12 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left text-gray-700">
+        <div>
+          <h3 class="text-lg font-bold text-black mb-3">DocuFast</h3>
+          <p class="text-sm leading-relaxed">Plateforme de gestion administrative universitaire.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-black mb-3">Navigation</h3>
+          <div class="space-y-1 text-sm">
+            <p>Accueil</p>
+            <p>Mes demandes</p>
+            <p>Documents validés</p>
+            <p>Nouvelle demande</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-black mb-3">Contact</h3>
+          <div class="space-y-1 text-sm">
+            <p>Email</p>
+            <p>LinkedIn</p>
+            <p>Facebook</p>
+          </div>
+        </div>
+      </div>
+      <div class="h-px bg-gray-300 my-6"></div>
+      <div class="text-center text-gray-500 text-sm">© 2025 DocuFast</div>
+    </div>
+  </footer>
+
+</body>
+</html>

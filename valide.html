@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documents validés - DocuFast</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+          colors: {
+            primary: '#E64A19',
+            accent: '#5E35B1',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .check-tilt { 
+      transform: rotate(-15deg); 
+      display: inline-block;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-blue-200 text-gray-800 flex flex-col">
+
+  <!-- NAVBAR -->
+  <header class="bg-gradient-to-r from-pink-200 via-pink-100 to-cyan-200 shadow-sm">
+    <div class="max-w-screen-2xl mx-auto px-4 lg:px-8 py-4 flex items-center justify-between">
+      
+      <div class="flex items-center gap-4 -ml-4">
+        <img src="logo-docufast.png" alt="DocuFast" class="h-14">
+        <div>
+          <div class="font-bold text-gray-900 text-xl">DocuFast</div>
+          <div class="text-xs text-gray-600 -mt-1">Plateforme de gestion administrative universitaire</div>
+        </div>
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
+        <a href="#" class="text-gray-700 hover:text-primary">Accueil</a>
+        <a href="#" class="text-gray-700 hover:text-primary">Mes demandes</a>
+        <a href="#" class="text-primary font-bold">Documents validés</a>
+        <a href="#" class="text-gray-700 hover:text-primary">Nouvelle demande</a>
+        <a href="#" class="text-gray-700 hover:text-primary">Mes démarches</a>
+        <a href="#" class="text-gray-700 hover:text-primary">Historique</a>
+        <a href="#" class="text-gray-700 hover:text-primary">Assistant</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#" class="bg-accent text-white px-4 py-2 rounded-full text-xs font-bold shadow-md hover:shadow-lg transition">
+          Se déconnecter
+        </a>
+        <img src="https://i.pravatar.cc/150" alt="Avatar" class="w-10 h-10 rounded-full border-2 border-white shadow">
+        <span class="material-icons text-gray-600 text-2xl cursor-pointer hover:text-gray-900">settings</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="flex-1 py-20 px-4">
+    <!-- Titre avec coche -->
+    <div class="text-center mb-16">
+      <div class="flex items-center justify-center gap-6">
+        <span class="material-icons text-primary check-tilt" style="font-size: 80px;">check</span>
+        <h1 class="text-4xl font-bold text-gray-700 tracking-wide">
+          VOTRE DEMANDE EST PRÉS!
+        </h1>
+      </div>
+    </div>
+
+    <!-- Tableau -->
+    <div class="max-w-3xl mx-auto rounded-3xl shadow-2xl overflow-hidden border-2 border-gray-200">
+      
+      <!-- En-tête -->
+      <div class="px-8 py-4 grid grid-cols-3 text-sm font-bold text-gray-700 uppercase" style="background-color: #EDDED7;">
+        <div>Votre demande</div>
+        <div class="text-center">Télécharger</div>
+        <div class="text-center">Action</div>
+      </div>
+
+      <!-- Ligne 1 - CERTIFICAT DE SCOLARITÉ -->
+      <div class="px-8 py-6 border-b-2 border-gray-100 grid grid-cols-3 items-center" style="background-color: #FFF6F6;">
+        <div class="flex items-center gap-4">
+          <span class="material-icons text-3xl text-red-400">description</span>
+          <span class="text-base font-semibold text-gray-800">CERTIFICAT DE SCOLARITÉ</span>
+        </div>
+        <div class="text-center">
+          <button class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors shadow-lg mx-auto">
+            <span class="material-icons text-white text-2xl">download</span>
+          </button>
+        </div>
+        <div class="text-center">
+          <a href="#" class="inline-flex items-center gap-2 text-accent font-semibold hover:text-primary transition-colors">
+            <span class="material-icons text-xl">visibility</span>
+            <span class="text-sm">voir détails</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Ligne 2 - RELEVÉ DE NOTE -->
+      <div class="px-8 py-6 border-b-2 border-gray-100 grid grid-cols-3 items-center" style="background-color: #FFFEF1;">
+        <div class="flex items-center gap-4">
+          <span class="material-icons text-3xl text-red-400">description</span>
+          <span class="text-base font-semibold text-gray-800">RELEVÉ DE NOTE</span>
+        </div>
+        <div class="text-center">
+          <button class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors shadow-lg mx-auto">
+            <span class="material-icons text-white text-2xl">download</span>
+          </button>
+        </div>
+        <div class="text-center">
+          <a href="#" class="inline-flex items-center gap-2 text-accent font-semibold hover:text-primary transition-colors">
+            <span class="material-icons text-xl">visibility</span>
+            <span class="text-sm">voir détails</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Ligne 3 - CARTE ÉTUDIANT -->
+      <div class="px-8 py-6 grid grid-cols-3 items-center" style="background-color: #FFF6F6;">
+        <div class="flex items-center gap-4">
+          <span class="material-icons text-3xl text-red-400">description</span>
+          <span class="text-base font-semibold text-gray-800">CARTE ÉTUDIANT</span>
+        </div>
+        <div class="text-center">
+          <button class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors shadow-lg mx-auto">
+            <span class="material-icons text-white text-2xl">download</span>
+          </button>
+        </div>
+        <div class="text-center">
+          <a href="#" class="inline-flex items-center gap-2 text-accent font-semibold hover:text-primary transition-colors">
+            <span class="material-icons text-xl">visibility</span>
+            <span class="text-sm">voir détails</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-lg mt-auto">
+    <div class="max-w-7xl mx-auto px-12 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left text-gray-700">
+        <div>
+          <h3 class="text-lg font-bold text-black mb-3">DocuFast</h3>
+          <p class="text-sm leading-relaxed">Plateforme de gestion administrative universitaire.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-black mb-3">Navigation</h3>
+          <div class="space-y-1 text-sm">
+            <p>Accueil</p>
+            <p>Mes demandes</p>
+            <p>Documents validés</p>
+            <p>Nouvelle demande</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-black mb-3">Contact</h3>
+          <div class="space-y-1 text-sm">
+            <p>Email</p>
+            <p>LinkedIn</p>
+            <p>Facebook</p>
+          </div>
+        </div>
+      </div>
+      <div class="h-px bg-gray-300 my-6"></div>
+      <div class="text-center text-gray-500 text-sm">© 2025 DocuFast</div>
+    </div>
+  </footer>
+
+</body>
+</html>
