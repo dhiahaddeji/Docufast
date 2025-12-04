@@ -9,14 +9,10 @@
     "tailwindcss": "^4.1.17"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/style.css --minify"
   },
-  "scripts": {
-  "build": "npx tailwindcss -i ./src/input.css -o ./public/style.css --minify"
-},
   "keywords": [],
   "author": "",
   "license": "ISC"
-  
 }
-
