@@ -27,7 +27,7 @@
 
     <nav class="hidden md:flex">
       <ul class="flex items-center gap-10 text-[15px] font-[Poppins]">
-        <li><a href="index.html" class="text-[#545252] font-bold">Accueil</a></li>
+        <li><a href="acceuil.html" class="text-[#545252] font-bold">Accueil</a></li>
         <li><a href="mesdocuments.html" class="text-[#B60C0C] font-bold">Mes documents</a></li>
         <li><a href="calendrier.html" class="text-[#545252] font-semibold">Calendrier</a></li>
         <li><a href="assistant.html" class="text-[#545252] font-semibold">Assistant</a></li>
@@ -54,7 +54,7 @@
     id="mobileMenu"
     class="hidden flex flex-col bg-white text-[#222020] px-6 py-4 space-y-3 md:hidden shadow"
   >
-    <a href="index.html" class="font-semibold">Accueil</a>
+    <a href="acceuil.html" class="font-semibold">Accueil</a>
     <a href="mesdocuments.html" class="font-bold text-[#B60C0C]">Mes documents</a>
     <a href="calendrier.html" class="font-semibold">Calendrier</a>
     <a href="assistant.html" class="font-semibold">Assistant</a>
@@ -208,31 +208,34 @@
   </section>
 </main>
 
-<footer class="mt-10 pb-10 px-4">
-  <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg px-8 py-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div>
-        <h3 class="text-[18px] font-extrabold">DocuFast</h3>
-        <p class="text-[15px]">
-          Plateforme de gestion administrative universitaire.
-        </p>
+<footer class="bg-white shadow-lg mt-auto">
+    <div class="max-w-7xl mx-auto px-12 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left text-gray-700">
+        <div>
+          <h3 class="text-lg font-bold text-black mb-3">DocuFast</h3>
+          <p class="text-sm leading-relaxed">Plateforme de gestion administrative universitaire.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-black mb-3">Navigation</h3>
+          <div class="space-y-1 text-sm">
+            <p>Accueil</p>
+            <p>Mes demandes</p>
+            <p>Documents validés</p>
+            <p>Nouvelle demande</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-black mb-3">Contact</h3>
+          <div class="space-y-1 text-sm">
+            <p>Email</p>
+            <p>LinkedIn</p>
+            <p>Facebook</p>
+          </div>
+        </div>
       </div>
-
-      <div>
-        <h3 class="text-[16px] font-extrabold">Navigation</h3>
-        <p>Accueil<br>Mes demandes<br>Documents validés<br>Nouvelle demande</p>
-      </div>
-
-      <div>
-        <h3 class="text-[16px] font-extrabold">Contact</h3>
-        <p>Email<br>LinkedIn<br>Facebook</p>
-      </div>
+      <div class="h-px bg-gray-300 my-6"></div>
+      <div class="text-center text-gray-500 text-sm">© 2025 DocuFast</div>
     </div>
-
-    <div class="border-t pt-3 text-center text-sm">
-      © 2025 DocuFast
-    </div>
-  </div>
-</footer>
+  </footer>
 </body>
 </html>
