@@ -65,17 +65,17 @@
         .ios-switch[data-state="on"] .ios-knob::before { content:"⚡"; font-size:16px; }
 
         /* NAVBAR */
-
         .navbar {
             width: 100%;
-            background: linear-gradient(
-                    90deg,
-                    #ffc0cb 0%,
-                    #c58af9 50%,
-                    #6054ec 100%
-            );
+            background: linear-gradient(90deg, #ffc0cb 0%, #fbcfe8 50%, #bfdbfe 100%);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
         }
+
+        /* Force Poppins everywhere in navbar */
+        .navbar, .navbar * {
+            font-family: "Poppins", sans-serif !important;
+        }
+
 
         .navbar-inner {
             max-width: 1200px;
@@ -84,67 +84,34 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 16px;
-        }
-
-        .navbar-left {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .logo-img {
-            height: 50px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .navbar-center {
-            display: flex;
-            align-items: center;
-            gap: 56px;
-            font-family: "Poppins", sans-serif;
-            font-size: 17px;
-        }
-
-        .nav-link {
-            color: var(--grey-text);
-            font-weight: 500;
-        }
-
-        .nav-link-strong {
-            font-weight: 700;
         }
 
         .nav-link-active {
-            color: var(--red-main);
+            color: #b60c0c;
+            font-weight: 800;
         }
 
-        .navbar-right {
-            display: flex;
-            align-items: center;
-            gap: 16px;
+        /* FOOTER */
+        .footer {
+            width: 50%;
+            max-width:1200px;
+            margin: 24px auto;
+            padding:18px 20px 10px;
+            background:#fff;
+            border-radius:15px;
+            box-shadow:0 4px 4px 5px rgba(0,0,0,0.25);
         }
-
-        .btn-logout {
-            padding: 6px 18px;
-            border-radius: 999px;
-            border: none;
-            background: var(--violet);
-            color: #fff;
-            font-family: "Poppins", sans-serif;
-            font-size: 14px;
-            font-weight: 700;
-            box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.25);
-            cursor: pointer;
+        .footer-inner {
+            display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;
         }
-
-        .avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-            background: #fff;
+        .footer-bottom {
+            border-top:1px solid #545252;
+            margin-top:10px; text-align:center; padding-top:8px;
+        }
+        .footer-block-title {
+            font-weight: 900;
+            font-size: 17px;
+            margin-bottom: 4px;
         }
 
         /* PAGE */
@@ -197,48 +164,41 @@
             align-items:center; font-size:17px; margin-bottom:12px;
         }
 
-        /* FOOTER */
-        .footer {
-            width: 50%;
-            max-width:1200px;
-            margin:0 auto 24px;
-            padding:18px 20px 10px;
-            background:#fff; border-radius:15px;
-            box-shadow:0 4px 4px 5px rgba(0,0,0,0.25);
-        }
-        .footer-inner {
-            display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;
-        }
-        .footer-bottom {
-            border-top:1px solid #545252;
-            margin-top:10px; text-align:center; padding-top:8px;
-        }
-        .footer-block-title {
-            font-weight: 900;      /* plus BOLD */
-            font-size: 17px;
-            margin-bottom: 4px;
-        }
 
     </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- 🔵 NAVBAR -->
 <header class="navbar">
     <div class="navbar-inner">
-        <a href="index.html"><img src="..\Docufast-main\logo-docufast.png" class="logo-img" /></a>
+        <a href="accueil.html">
+            <img src="assets/logo.svg" class="h-10" />
+        </a>
 
-        <nav class="navbar-center">
-            <a href="index.html">Accueil</a>
-            <a href="mesdemarches.html">Mes démarches</a>
-            <a href="calendrier.html">Models</a>
-            <a href="profile.html" class="nav-link-active">Profil</a>
+        <nav class="hidden md:flex">
+            <ul class="flex items-center gap-7 text-[15px] font-[Poppins]">
+                <li><a href="acceuil.html" class="text-[#545252] font-bold">Accueil</a></li>
+                <li><a href="valide.html" class="text-[#545252] font-bold">Mes demandes</a></li>
+                <li><a href="assistant d'enchainement.html" class="text-[#545252] font-bold">Nouvelle demande</a></li>
+                <li><a href="assistantchat.html" class="text-[#545252] font-bold">Chatbot</a></li>
+                <li><a href="mesdocuments.html" class="text-[#545252] font-bold">Mes documents</a></li>
+                <li><a href="historique.html" class="text-[#545252] font-bold">Historique</a></li>
+
+            </ul>
         </nav>
 
-        <div class="navbar-right">
-            <button class="btn-logout">Se Déconnecter</button>
-            <img src="https://placehold.co/40x40" class="avatar">
+        <div class="flex items-center gap-4">
+            <button
+                    onclick="window.location.href='login1.html'"
+                    class="bg-[#6054ec] text-white px-4 py-2 rounded-full shadow-md font-semibold cursor-pointer"
+            >
+                Se Déconnecter
+            </button>
+            <a href="profile.html">
+                <img src="assets/man.svg" class="rounded-full cursor-pointer">
+            </a>
         </div>
     </div>
 </header>
@@ -308,27 +268,36 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-inner">
-        <div>
-            <h3 class="footer-block-title">DocuFast</h3>
-            <p>Plateforme de gestion administrative universitaire.</p>
+<!-- Footer -->
+<footer class="bg-white shadow-lg mt-auto">
+    <div class="max-w-7xl mx-auto px-12 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left text-gray-700">
+            <div>
+                <h3 class="text-lg font-bold text-black mb-3">DocuFast</h3>
+                <p class="text-sm leading-relaxed">Plateforme de gestion administrative universitaire.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-black mb-3">Navigation</h3>
+                <div class="space-y-1 text-sm">
+                    <p>Accueil</p>
+                    <p>Mes demandes</p>
+                    <p>Documents validés</p>
+                    <p>Nouvelle demande</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-black mb-3">Contact</h3>
+                <div class="space-y-1 text-sm">
+                    <p>Email</p>
+                    <p>LinkedIn</p>
+                    <p>Facebook</p>
+                </div>
+            </div>
         </div>
-
-        <div>
-            <h4 class="footer-block-title">Navigation</h4>
-            <p>Accueil<br>Mes demandes<br>Documents validés<br>Nouvelle demande</p>
-        </div>
-
-        <div>
-            <h4 class="footer-block-title">Contact</h4>
-            <p>Email<br>LinkedIn<br>Facebook</p>
-        </div>
+        <div class="h-px bg-gray-300 my-6"></div>
+        <div class="text-center text-gray-500 text-sm">© 2025 DocuFast</div>
     </div>
-
-    <div class="footer-bottom">© 2025 DocuFast</div>
 </footer>
-
 <!-- JS Switch -->
 <script>
     document.querySelectorAll('.ios-switch').forEach(btn => {

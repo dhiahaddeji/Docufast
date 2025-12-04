@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Documents validés - DocuFast</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -21,44 +22,93 @@
     }
   </script>
   <style>
-    .check-tilt { 
-      transform: rotate(-15deg); 
+    .check-tilt {
+      transform: rotate(-15deg);
       display: inline-block;
     }
+
+
+         /* NAVBAR */
+     .navbar {
+         width: 100%;
+         background: linear-gradient(90deg, #ffc0cb 0%, #fbcfe8 50%, #bfdbfe 100%);
+         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+         font-family: "Poppins", sans-serif;
+     }
+
+    .navbar-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-link-active {
+        color: #b60c0c;
+        font-weight: 800;
+    }
+
+    /* FOOTER */
+    .footer {
+        width: 50%;
+        max-width:1200px;
+        margin: 24px auto;
+        padding:18px 20px 10px;
+        background:#fff;
+        border-radius:15px;
+        box-shadow:0 4px 4px 5px rgba(0,0,0,0.25);
+    }
+    .footer-inner {
+        display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;
+    }
+    .footer-bottom {
+        border-top:1px solid #545252;
+        margin-top:10px; text-align:center; padding-top:8px;
+    }
+    .footer-block-title {
+        font-weight: 900;
+        font-size: 17px;
+        margin-bottom: 4px;
+    }
+
   </style>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-blue-200 text-gray-800 flex flex-col">
 
   <!-- NAVBAR -->
-  <header class="bg-gradient-to-r from-pink-200 via-pink-100 to-cyan-200 shadow-sm">
-    <div class="max-w-screen-2xl mx-auto px-4 lg:px-8 py-4 flex items-center justify-between">
-      
-      <div class="flex items-center gap-4 -ml-4">
-        <img src="logo-docufast.png" alt="DocuFast" class="h-14">
-        <div>
-          <div class="font-bold text-gray-900 text-xl">DocuFast</div>
-          <div class="text-xs text-gray-600 -mt-1">Plateforme de gestion administrative universitaire</div>
-        </div>
-      </div>
+  <!-- 🔵 NAVBAR -->
+  <header class="navbar">
+      <div class="navbar-inner">
+          <a href="accueil.html">
+              <img src="assets/logo.svg" class="h-10" />
+          </a>
 
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
-        <a href="#" class="text-gray-700 hover:text-primary">Accueil</a>
-        <a href="#" class="text-gray-700 hover:text-primary">Mes demandes</a>
-        <a href="#" class="text-primary font-bold">Documents validés</a>
-        <a href="#" class="text-gray-700 hover:text-primary">Nouvelle demande</a>
-        <a href="#" class="text-gray-700 hover:text-primary">Mes démarches</a>
-        <a href="#" class="text-gray-700 hover:text-primary">Historique</a>
-        <a href="#" class="text-gray-700 hover:text-primary">Assistant</a>
-      </nav>
+          <nav class="hidden md:flex">
+              <ul class="flex items-center gap-7 text-[15px] font-[Poppins]">
+                  <li><a href="acceuil.html" class="text-[#545252] font-bold">Accueil</a></li>
+                  <li><a href="valide.html" class="text-[#B60C0C] font-bold">Mes demandes</a></li>
+                  <li><a href="assistant d'enchainement.html" class="text-[#545252] font-bold">Nouvelle demande</a></li>
+                  <li><a href="assistantchat.html" class="text-[#545252] font-bold">Chatbot</a></li>
+                  <li><a href="mesdocuments.html" class="text-[#545252] font-bold">Mes documents</a></li>
+                  <li><a href="historique.html" class="text-[#545252] font-bold">Historique</a></li>
 
-      <div class="flex items-center gap-3">
-        <a href="#" class="bg-accent text-white px-4 py-2 rounded-full text-xs font-bold shadow-md hover:shadow-lg transition">
-          Se déconnecter
-        </a>
-        <img src="https://i.pravatar.cc/150" alt="Avatar" class="w-10 h-10 rounded-full border-2 border-white shadow">
-        <span class="material-icons text-gray-600 text-2xl cursor-pointer hover:text-gray-900">settings</span>
+              </ul>
+          </nav>
+
+          <div class="flex items-center gap-4">
+              <button
+                      onclick="window.location.href='login1.html'"
+                      class="bg-[#6054ec] text-white px-4 py-2 rounded-full shadow-md font-semibold cursor-pointer"
+              >
+                  Se Déconnecter
+              </button>
+              <a href="profile.html">
+                  <img src="assets/man.svg" class="rounded-full cursor-pointer">
+              </a>
+          </div>
       </div>
-    </div>
   </header>
 
   <!-- MAIN -->

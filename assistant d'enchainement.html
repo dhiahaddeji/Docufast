@@ -4,51 +4,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Assistant</title>
+    <style>
+
+
+        /* NAVBAR */
+        .navbar {
+            width: 100%;
+            background: linear-gradient(90deg, #ffc0cb 0%, #fbcfe8 50%, #bfdbfe 100%);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-link-active {
+            color: #b60c0c;
+            font-weight: 800;
+        }
+
+        /* FOOTER */
+        .footer {
+            width: 50%;
+            max-width:1200px;
+            margin: 24px auto;
+            padding:18px 20px 10px;
+            background:#fff;
+            border-radius:15px;
+            box-shadow:0 4px 4px 5px rgba(0,0,0,0.25);
+        }
+        .footer-inner {
+            display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;
+        }
+        .footer-bottom {
+            border-top:1px solid #545252;
+            margin-top:10px; text-align:center; padding-top:8px;
+        }
+        .footer-block-title {
+            font-weight: 900;
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+    </style>
 </head>
 
 <body class="bg-white font-Poppins">
 
 
-    <nav class="w-full bg-gradient-to-r from-pink-200 to-blue-200 py-4 shadow">
-        <div class="max-w-7xl mx-auto flex items-center justify-between px-6">
+<!-- 🔵 NAVBAR -->
+<header class="navbar">
+    <div class="navbar-inner">
+        <a href="accueil.html">
+            <img src="assets/logo.svg" class="h-10" />
+        </a>
 
-          
-            <div class="flex items-center gap-2">
-                <img src="assets/logo.svg" />
-            </div>
+        <nav class="hidden md:flex">
+            <ul class="flex items-center gap-7 text-[15px] font-[Poppins]">
+                <li><a href="acceuil.html" class="text-[#545252] font-bold">Accueil</a></li>
+                <li><a href="valide.html" class="text-[#545252] font-bold">Mes demandes</a></li>
+                <li><a href="assistant d'enchainement.html" class="text-[#B60C0C] font-bold">Nouvelle demande</a></li>
+                <li><a href="assistantchat.html" class="text-[#545252] font-bold">Chatbot</a></li>
+                <li><a href="mesdocuments.html" class="text-[#545252] font-bold">Mes documents</a></li>
+                <li><a href="historique.html" class="text-[#545252] font-bold">Historique</a></li>
 
-           
-            <div class="flex gap-8 text-sm font-medium">
-                <a href="#" class="hover:text-blue-700">Accueil</a>
-                <a href="#" class="text-red-600 font-bold">Mes demandes</a>
-                <a href="#" class="hover:text-blue-700">Documents validés</a>
-                <a href="#" class="hover:text-blue-700">Nouvelle demande</a>
-                <a href="#" class="hover:text-blue-700">Mes démarches</a>
-                <a href="#" class="hover:text-blue-700">Historique</a>
-                <a href="#" class="hover:text-blue-700">Assistant</a>
-            </div>
+            </ul>
+        </nav>
 
-           
-            <div class="flex items-center gap-3 relative">
-
-                <button class="bg-indigo-500 text-white px-4 py-1 rounded-xl shadow font-semibold">
-                    Se déconnecter
-                </button>
-
-                <div class="relative">
-                    <img src="assets/man.svg" class="w-12 h-12 rounded-full shadow" />
-                    <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center justify-center">
-                        <img src="assets/cogwheel.svg" class="w-6 h-6" />
-                    </div>
-                </div>
-
-            </div>
-
+        <div class="flex items-center gap-4">
+            <button
+                    onclick="window.location.href='login1.html'"
+                    class="bg-[#6054ec] text-white px-4 py-2 rounded-full shadow-md font-semibold cursor-pointer"
+            >
+                Se Déconnecter
+            </button>
+            <a href="profile.html">
+                <img src="assets/man.svg" class="rounded-full cursor-pointer">
+            </a>
         </div>
-    </nav>
+    </div>
+</header>
 
-    <section class="w-full bg-gradient-to-br from-pink-100 to-blue-100 py-20">
+
+
+<section class="w-full bg-gradient-to-br from-pink-100 to-blue-100 py-20">
 
         <div class="max-w-4xl mx-auto">
 
@@ -80,12 +127,14 @@
             <span class="text-lg font-semibold">Remplir le formulaire</span>
         </div>
 
-        <div class="flex items-center gap-4 bg-white shadow-lg rounded-2xl px-6 py-4">
-            <div class="w-8 h-8 border-2 border-black rounded-md"></div>
-            <span class="text-lg font-semibold">Joindre une pièce d’identité</span>
+        <div   class="flex items-center gap-4 bg-white shadow-lg rounded-2xl px-6 py-4">
+            <div  class="w-8 h-8 border-2 border-black rounded-md"></div>
+            <span class="text-lg font-semibold"> <a href="upload.html">Joindre une pièce d’identité</a></span>
+
         </div>
 
-     
+
+
         <div class="flex items-center gap-4 bg-white shadow-lg rounded-2xl px-6 py-4 w-72">
             <div class="w-8 h-8 border-2 border-black rounded-md"></div>
             <span class="text-lg font-semibold">Soumettre</span>
@@ -114,37 +163,37 @@
     </section>
 
 
-    <footer class="bg-white shadow-xl rounded-t-2xl mt-10 py-10">
-
-        <div class="max-w-7xl mx-auto grid grid-cols-3 px-10 text-gray-700">
-
+<!-- Footer -->
+<footer class="bg-white shadow-lg mt-auto">
+    <div class="max-w-7xl mx-auto px-12 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left text-gray-700">
             <div>
-                <h3 class="font-bold text-lg mb-2">DocuFast</h3>
-                <p>Plateforme de gestion administrative universitaire.</p>
+                <h3 class="text-lg font-bold text-black mb-3">DocuFast</h3>
+                <p class="text-sm leading-relaxed">Plateforme de gestion administrative universitaire.</p>
             </div>
-
             <div>
-                <h3 class="font-bold text-lg mb-2">Navigation</h3>
-                <p>Accueil</p>
-                <p>Mes demandes</p>
-                <p>Documents validés</p>
-                <p>Nouvelle demande</p>
+                <h3 class="text-lg font-bold text-black mb-3">Navigation</h3>
+                <div class="space-y-1 text-sm">
+                    <p>Accueil</p>
+                    <p>Mes demandes</p>
+                    <p>Documents validés</p>
+                    <p>Nouvelle demande</p>
+                </div>
             </div>
-
             <div>
-                <h3 class="games text-lg mb-2">Contact</h3>
-                <p>Email</p>
-                <p>LinkedIn</p>
-                <p>Facebook</p>
+                <h3 class="text-lg font-bold text-black mb-3">Contact</h3>
+                <div class="space-y-1 text-sm">
+                    <p>Email</p>
+                    <p>LinkedIn</p>
+                    <p>Facebook</p>
+                </div>
             </div>
-
         </div>
+        <div class="h-px bg-gray-300 my-6"></div>
+        <div class="text-center text-gray-500 text-sm">© 2025 DocuFast</div>
+    </div>
+</footer>
 
-        <div class="text-center text-sm mt-6 text-gray-600">
-            © 2025 DocuFast
-        </div>
-
-    </footer>
 
 </body>
 
